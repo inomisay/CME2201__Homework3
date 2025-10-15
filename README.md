@@ -1,33 +1,28 @@
 # Constructing an Evolutionary Tree
 
-[cite_start]This is a university assignment for the **CME 2201** course, focusing on the development of a Java program to represent the Tree of Life (ToL) dataset[cite: 5218, 5225]. [cite_start]The core of the project is a custom-built General Tree ADT, which is enhanced with a `Hashtable` for efficient data access[cite: 5220, 5225].
+This is a university assignment for the **CME 2201** course, focusing on the development of a Java program to represent the Tree of Life (ToL) dataset. [cite_start]The project's core is a custom-built General Tree ADT, which is enhanced with a `Hashtable` for efficient data access[cite: 5225].
 
-This repository contains two separate implementations of the solution: **EvolutionaryTree** and **TreeOfLife**.
+This repository contains two separate implementations of the project: **EvolutionaryTree** and **TreeOfLife**.
 
 ---
-
 ## About The Project
 
-[cite_start]The goal of this project is to model the evolutionary relationships between various biological species using data from the Tree of Life Web Project[cite: 5221, 5225]. [cite_start]The program parses two CSV files containing 35,960 species to build a hierarchical tree that illustrates the genetic connections between them[cite: 5227, 5228].
+[cite_start]The goal of this project is to model the evolutionary relationships between various biological species using data from the Tree of Life Web Project[cite: 5221]. [cite_start]The program parses two CSV files containing 35,960 species to build a hierarchical tree that illustrates the genetic connections between them[cite: 5227].
 
 [cite_start]The data structure uses a `Hashtable` to provide rapid access to any species record by its unique ID[cite: 5247]. [cite_start]These records are then linked together into a custom **General Tree** structure, where each node can have zero or more children and also maintains a reference to its parent node to allow for tracing ancestor paths[cite: 5246, 5248].
 
 ---
-
 ## Project Implementations
 
 This repository contains two distinct versions of the project, located in their respective folders.
 
-### EvolutionaryTree
+### 📁 EvolutionaryTree
+*(You can add a brief description of this version's specific approach here. For example: "This version uses a recursive approach for tree traversal...")*
 
-*(You can add a brief description of the specific approach or data structure choices for your first implementation here.)*
-
-### TreeOfLife
-
-*(You can add a brief description of the specific approach or data structure choices for your second implementation here.)*
+### 📁 TreeOfLife
+*(You can add a brief description of this version's specific approach here. For example: "This version uses an iterative approach with stacks and queues for tree traversal...")*
 
 ---
-
 ## Core Functionalities
 
 Both implementations provide a console menu with the following features:
@@ -43,47 +38,85 @@ Both implementations provide a console menu with the following features:
 * [cite_start]**Find Longest Path**: Identifies and prints the longest evolutionary path or paths within the tree[cite: 5325].
 
 ---
-
 ## Dataset Details
 
-The program uses two data files:
+[cite_start]The program uses two data files to build the tree[cite: 5239].
 
-### [cite_start]Species File (`treeoflife_nodes.csv`) [cite: 5240]
+### Species File (`treeoflife_nodes.csv`)
+This file contains information for each node in the tree.
 
-This file contains information for each node in the tree. Its attributes are:
-* [cite_start]**node id**: A numeric identifier for the species[cite: 5241].
-* [cite_start]**node\_name**: The name of the species[cite: 5241].
-* [cite_start]**child nodes**: The number of child nodes[cite: 5241].
-* [cite_start]**leaf node**: Indicates if the node is a leaf[cite: 5241].
-* [cite_start]**tolorg\_link**: Indicates if a page exists on the `tolweb.org` website for the species[cite: 5241].
-* [cite_start]**extinct**: Indicates if the species is living (0) or extinct (1)[cite: 5241].
-* [cite_start]**confidence**: Confidence in the tree structure's placement (0: confident, 1: problematic, 2: unspecified)[cite: 5241].
-* [cite_start]**phylesis**: Indicates if the group is monophyletic (0), of uncertain monophyly (1), or not monophyletic (2)[cite: 5241].
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>node id</b></td>
+    [cite_start]<td>Numeric identifier for the species in the tree[cite: 5241].</td>
+  </tr>
+  <tr>
+    <td><b>node_name</b></td>
+    [cite_start]<td>Name of the species or none if unknown[cite: 5241].</td>
+  </tr>
+  <tr>
+    <td><b>child nodes</b></td>
+    [cite_start]<td>Number of child nodes[cite: 5241].</td>
+  </tr>
+  <tr>
+    <td><b>leaf node</b></td>
+    [cite_start]<td>Whether or not the node is a leaf[cite: 5241].</td>
+  </tr>
+    <tr>
+    <td><b>tolorg_link</b></td>
+    [cite_start]<td>Indicates if a page exists on the tolweb.org website for this species[cite: 5241].</td>
+  </tr>
+  <tr>
+    <td><b>extinct</b></td>
+    [cite_start]<td>Whether the species is living (0) or extinct (1)[cite: 5241].</td>
+  </tr>
+  <tr>
+    <td><b>confidence</b></td>
+    [cite_start]<td>Confidence of placement in the tree structure (0 - confident, 1 - problematic, 2 - unspecified)[cite: 5241].</td>
+  </tr>
+  <tr>
+    <td><b>phylesis</b></td>
+    [cite_start]<td>Monophyletic status (0 - monophyletic, 1 - uncertain monophyly, 2 - not monophyletic)[cite: 5241].</td>
+  </tr>
+</table>
 
-### [cite_start]Tree Links File (`treeoflife_links.csv`) [cite: 5242]
+### Tree Links File (`treeoflife_links.csv`)
+This file defines the parent-child relationships that form the tree structure.
 
-This file defines the parent-child relationships that form the tree structure. Its attributes are:
-* [cite_start]**source\_node\_id**: The identifier for the ancestor (source) node[cite: 5243].
-* [cite_start]**target\_node\_id**: The identifier for the descendant (target) node[cite: 5243].
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><b>source_node_id</b></td>
+    [cite_start]<td>The identifier for the ancestor (source) node[cite: 5243].</td>
+  </tr>
+  <tr>
+    <td><b>target_node_id</b></td>
+    [cite_start]<td>The identifier for the descendant (target) node[cite: 5243].</td>
+  </tr>
+</table>
 
 ---
-
 ## How to Run
 
-1.  [cite_start]Ensure you have a Java Development Kit (JDK) installed[cite: 5333].
-2.  Place the `treeoflife_nodes.csv` and `treeoflife_links.csv` files in the project's root directory.
-3.  Navigate into the directory of the version you wish to run (`EvolutionaryTree` or `TreeOfLife`).
-4.  Compile all `.java` files and run the main class to launch the interactive menu.
+1.  Ensure you have a Java Development Kit (JDK) installed.
+2.  Place the `treeoflife_nodes.csv` and `treeoflife_links.csv` files in the same root directory as the `EvolutionaryTree` and `TreeOfLife` folders.
+3.  Navigate into the directory of the version you wish to run.
+4.  Compile the Java files and run the main class to launch the interactive menu.
 
 #### To Run the `EvolutionaryTree` Version:
 ```bash
-# Example commands (adjust paths as needed)
-cd EvolutionaryTree/
+cd EvolutionaryTree
 javac *.java
 java Main
-#### To Run the `TreeOfLife` Version:
-```bash
-# Example commands (adjust paths as needed)
-cd TreeOfLife/
+
+To Run the TreeOfLife Version:
+cd TreeOfLife
 javac *.java
 java Main
