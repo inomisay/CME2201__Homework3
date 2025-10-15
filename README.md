@@ -113,15 +113,11 @@ This file defines the parent-child relationships that form the tree structure.
 4.  Compile the Java files and run the main class to launch the interactive menu.
 
 #### To Run the `EvolutionaryTree` Version:
-```bash
 cd EvolutionaryTree
 javac *.java
 java Main
-bash```
 
 #### To Run the `TreeOfLife` Version:
-```bash
 cd TreeOfLife
 javac *.java
 java Main
-bash```
