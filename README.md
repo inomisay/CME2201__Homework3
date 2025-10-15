@@ -116,7 +116,7 @@ cd EvolutionaryTree
 javac *.java
 java Main
 
-To Run the TreeOfLife Version:
+#### To Run the `TreeOfLife` Version:
 cd TreeOfLife
 javac *.java
 java Main
